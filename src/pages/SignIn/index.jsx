@@ -13,13 +13,15 @@ import { Button } from '../../components/Button';
 export function SignIn() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-
+    
 
     const { signIn } = useAuth();
     
     function handleSignIn() {
         signIn({ email, password });
     }
+
+    
 
     return (
         <Container>
@@ -43,6 +45,7 @@ export function SignIn() {
                     type="password"
                     icon={FiLock}
                     onChange={e => setPassword(e.target.value)}
+                    autoComplete="on"
                 />
 
                 <Button title="Entrar" onClick={handleSignIn} />

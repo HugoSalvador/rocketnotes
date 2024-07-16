@@ -22,7 +22,7 @@ export const Container = styled.header`
 
 export const Profile = styled(Link)`
     display:flex;
-
+    text-decoration: none;
 
     margin: 16px;
     
